@@ -1,25 +1,26 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 /* ============================
    Section 1 - Navbar
    ============================ */
 
+
+
 .primary-nav ul.nav li {
+	border-top: 0px solid transparent;
+	transition: all 0.1s ease-in-out;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 12px;
 	margin: 0px 10px;
-	transition: all 0.1s ease-in-out;
-	border-top: 0px solid transparent;
 }
 
 .primary-nav ul.nav li a {
 	padding-top: 5px;
 	padding-left: 2px;
 	padding-right: 2px;
+
 	
 }
 
@@ -30,20 +31,22 @@
 	cursor:pointer;
 	border-top: 3px solid #ff8500;
 	transition: all 0.1s ease-in-out;
-	}
+}
 
 
 .primary-nav {
 	padding-top: 25px;
 	background-color: transparent;
 	border-bottom:none;
-		opacity: 1;
-	transition: opacity 0.3s ease-in-out;
-	}
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	margin-top: 0px;
+}
 
 .visible {
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	margin-top: -50px;
+	transition: all 0.3s ease-in-out;
 }
 
 .secondary-nav {
@@ -51,8 +54,8 @@
 	display:block;
 	padding-top: 5px;
 	transition: all 0.3s ease-in-out;
-	background-color: rgba(255,255,255,0.95);
-	border-bottom: 2px solid rgba(0,0,0,0.1);
+	background-color: f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 	
 }
 
@@ -66,7 +69,7 @@
 .secondary-nav ul.nav li {
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 12px;
 	margin: 0px 10px;
 	margin-top: 0px;

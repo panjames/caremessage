@@ -8,9 +8,9 @@
     jQuery(document).ready(function () {
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
-            if (scroll >= 50) {
+            if (scroll >= 25) {
                 $(".primary-nav").addClass("visible");
-            } else if (scroll < 50) {
+            } else if (scroll < 25) {
                 $(".primary-nav").removeClass("visible");
             }
         });
