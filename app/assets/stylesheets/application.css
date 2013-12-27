@@ -10,7 +10,7 @@
  *
  *= require bootstrap.min
  *= require_self
- *= require_custom
+ *= require custom
  *= require_tree .
  */
 

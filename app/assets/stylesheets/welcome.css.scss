@@ -2,7 +2,164 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h2.test {
-	font-size: 25px; 
+/* ============================
+   Section 1 - Navbar
+   ============================ */
+
+.primary-nav ul.nav li {
 	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 12px;
+	margin: 0px 10px;
+	transition: all 0.1s ease-in-out;
+	border-top: 0px solid transparent;
 }
+
+.primary-nav ul.nav li a {
+	padding-top: 5px;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+}
+
+.primary-nav .navbar-nav>li>a {color: #fff;}
+.primary-nav .navbar-nav>li>a:hover {color: #fff; }
+
+.primary-nav ul.nav li:hover {
+	cursor:pointer;
+	border-top: 3px solid #ff8500;
+	transition: all 0.1s ease-in-out;
+	}
+
+
+.primary-nav {
+	padding-top: 25px;
+	background-color: transparent;
+	border-bottom:none;
+		opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+	}
+
+.visible {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.secondary-nav {
+	opacity: 1;
+	display:block;
+	padding-top: 5px;
+	transition: all 0.3s ease-in-out;
+	background-color: rgba(255,255,255,0.95);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	
+}
+
+.secondary-visible {
+	opacity: 0;
+	display:block;
+	transition: all 0.3s ease-in-out;
+	margin-top: -50px;
+}
+
+.secondary-nav ul.nav li {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 12px;
+	margin: 0px 10px;
+	margin-top: 0px;
+}
+
+.secondary-nav ul.nav li:hover {
+	cursor: pointer;
+}
+
+.secondary-nav .navbar-nav>li>a:hover {color: #ff8500;}
+
+.secondary-nav ul.nav li a {
+	padding-top: 15px;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+}
+
+/* ============================
+   Section 2 - Global Structure
+   ============================ */
+   
+.body-container {
+	padding-top:100px;
+}
+
+/* ============================
+   Section 3 - Homepage
+   ============================ */
+   
+#homepage-1 {
+	background-color: #00c9ab;
+	background-image: url('/assets/white-gradient.png');
+	background-position: center center;
+	background-repeat: none;
+	
+}
+
+h1.hero {
+	color:#fff;
+	font-weight: 100;
+	font-size: 32px;
+	text-align:center;
+	margin-bottom: 25px;
+}
+
+img.hero {
+	width: 100%;
+	display:block;
+	margin: 40px auto;
+	
+}
+
+p.hero-sub {
+	text-align:center;
+}
+
+p.hero-sub a:nth-child(1) {
+	margin-right: 15px;
+}
+
+a.call-to-action {
+	font-size: 16px;
+	font-weight: 400;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	color: #fff;
+	transition: all 0.1s ease-in-out;
+}
+
+a.call-to-action:hover {
+	transition: all 0.1s ease-in-out;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+a.demo {
+	border: 1px solid #fffce3;
+	color: #fffce3;
+}
+
+a.demo:hover {
+	background-color: #fffce3;
+	color: #333;
+}
+
+a.trial:hover {
+	background-color: #fff;
+	color: #333;
+}
+	
+	
+	
+	
+	
