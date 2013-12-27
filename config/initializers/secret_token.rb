@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Caremessage::Application.config.secret_key_base = 'ef07c02ddf73bd0c3fcce9607f9560f3c7c099082c343c319d924f0c3a7b3889db0c49f7f9d51c8ec5c5d78b9364ac6ba2a7a8684b8f55b02c2bafa61acc9ff4'
+Caremessage::Application.config.secret_key_base = '76d8e950f862b4e3cfdc559f194a49205b79d7e09c8a3fb43dec3fb5aa8f6048fcb212159f8e3600fca33ec7c9cc9b2a73ad2a8b11f59db3c977894d1fe41435'
