@@ -10,6 +10,7 @@
  *
  *= require bootstrap.min
  *= require_self
+ *= require_custom
  *= require_tree .
  */
 
@@ -21,3 +22,5 @@
        url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+
