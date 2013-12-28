@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height:2000px;">
+<html>
 <head>
   <title>Caremessage</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -27,7 +27,7 @@
 </script>
   <%= csrf_meta_tags %>
 </head>
-<body style="height:2000px;">
+<body>
 
    <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top primary-nav" role="navigation">
@@ -84,6 +84,19 @@
 
 
 <%= yield %>
+
+<footer>
+<div class=container>
+<span class=footer-logo>caremessage</span>
+<p class=footer-address>
+424 Clay Street, Lower Level<br/>
+San Francisco, CA 94104<br/>
+<a href="mailto:info@caremessage.org" target=_blank>info@caremessage.org</a>
+</p>
+<hr/>
+© 2014 caremessage
+</div>
+</footer>
 
 </body>
 
