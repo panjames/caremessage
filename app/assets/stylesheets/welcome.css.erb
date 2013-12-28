@@ -4,7 +4,9 @@
    Section 1 - Navbar
    ============================ */
 
-
+.primary-nav ul.nav {
+	padding-top: 15px;
+}
 
 .primary-nav ul.nav li {
 	border-top: 0px solid transparent;
@@ -41,6 +43,10 @@
 	opacity: 1;
 	transition: all 0.3s ease-in-out;
 	margin-top: 0px;
+}
+
+.primary-nav .navbar-brand {
+	color:#fff;
 }
 
 .visible {
@@ -101,19 +107,36 @@
    ============================ */
    
 #homepage-1 {
-	background-color: #00c9ab;
+	background-color: #09cc8f;
 	background-image: url(<%= asset_path 'white-gradient.png' %>);
 	background-position: center center;
 	background-repeat: none;
+	padding-bottom: 25px;
 	
 }
+
+#homepage-2 {
+
+	padding: 50px 0px;
+	
+}
+
 
 h1.hero {
 	color:#fff;
 	font-weight: 100;
 	font-size: 32px;
 	text-align:center;
-	margin-bottom: 25px;
+	
+}
+
+h2.hero-sub {
+	color: #333;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 24px;
+	text-align:left;
 }
 
 img.hero {
@@ -124,11 +147,16 @@ img.hero {
 }
 
 p.hero-sub {
+	margin-top: 25px;
 	text-align:center;
 }
 
 p.hero-sub a:nth-child(1) {
 	margin-right: 15px;
+}
+
+p.caption {
+	
 }
 
 a.call-to-action {
