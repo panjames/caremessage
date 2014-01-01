@@ -1,6 +1,8 @@
 Caremessage::Application.routes.draw do
+  get "solutions/index"
   get "welcome/index"
   get "welcome/product"
+    get "welcome/solutions"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

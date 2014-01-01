@@ -1,4 +1,5 @@
 
+	
 
 /* ============================
    Section 1 - Navbar
@@ -107,6 +108,22 @@ a:hover {
 	text-decoration: none;
 }
 
+img.hero-above {
+	width: 100px;
+	display: block;
+	margin: 25px auto;
+}
+
+img.sub-hero-above {
+	width: 50px;
+	display: block;
+	margin: 10px 0px;
+}
+
+html, body {
+	height:100%;
+}
+
 /* ============================
    Section 3 - Footer
    ============================ */
@@ -178,8 +195,17 @@ img.social-icon {
 h1.hero {
 	color:#fff;
 	font-weight: 100;
-	font-size: 32px;
+	font-size: 38px;
 	text-align:center;
+	letter-spacing: -1px;
+	
+}
+
+h2.hero {
+	font-weight: 300;
+	font-size: 28px;
+	text-align:left;
+	letter-spacing: 0px;
 	
 }
 
@@ -296,6 +322,149 @@ a.trial:hover {
 }
 	
 	
+/* ============================
+   Section 5 - Product
+   ============================ */
+   
+#product-1 {
+	background-color: #1869a8;
+	background-image: url(<%= asset_path 'white-gradient.png' %>);
+	background-position: center center;
+	background-repeat: none;
+	padding-bottom: 25px;
+	color: #fff;
+	min-height:100%;
+	max-height: 700px;
 	
+}
+
+.see-the-features {
+	margin-bottom: 50px;
+	text-align:center;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.see-the-features img {
+	width:50px;
+	padding: 15px 7px;
+	border: 1px solid #fff;
+	border-radius: 1000px;
+	margin-bottom: 15px;
+	opacity: 0.8;
+}
+
+.see-the-features img:hover {
+	opacity: 1;
+	background-color: rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+
+#product-1-sub {
+	margin: 50px 0px;
+}
+
+.dark h2.hero-sub {color: #fff;}
+
+.dark p.hero-sub-3 {
+	margin: 0px 50px;
+	text-align:center;
+	color: #eee;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+#product-2 {
+	margin: 50px 0px;
+}
+
+#product-2 hr {
+	margin: 50px 0px;
+}
+
+.light h1.hero {color: #000;}
+
+.light p.hero-sub-3 {
+	margin: 0px 50px;
+	text-align:center;
+	color: #333;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+img.hero-product {
+	margin-top: 50px;
+	width: 100%;
+}
+
+p.hero-product-caption {
+	padding-top: 15px;
+	color: #aaa;
+	text-align:center;
+	margin: 0px 75px;
+}
 	
+.product-tabs {
+	margin: 50px 0px;
+}
+
+.product-tabs ul {
+	text-align:center;
+}
+
+.product-tabs .nav-pills>li {
+	float:none;
+	display:inline-block;
+	}
+	
+.truncate {
+	height:500px;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+}
+
+#product-3 {
+	background-color: #6da700;
+	background-image: url(<%= asset_path 'white-gradient.png' %>);
+	background-position: center center;
+	background-repeat: none;
+	padding-bottom: 25px;
+	color: #fff;
+	position:relative;
+	
+}
+
+.video-overlay {
+	width:100%;
+	position: absolute;
+	top:0px;
+	margin:0px;
+	padding: 35px 100px;
+	text-align:center;
+	font-weight: 100;
+	background-color: rgba(0,0,0,0.8);
+	
+}
+
+.video-overlay h1 {
+	font-weight: 100;
+	font-size: 32px;
+	margin:0px;
+	
+}
+
+.video-overlay p {
+	font-weight: 400;
+	font-size: 18px;
+	margin: 0px 100px;
+	line-height: 130%;
+	margin-top: 5px;
+}
+
+video.product-video {
+	width:100%;
+	margin-bottom:-31px;
+	
+}
 	

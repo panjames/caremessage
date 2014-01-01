@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   end
   def product
   end
-  def product_provider
+  def solutions
   end
   def product_patient
   end
