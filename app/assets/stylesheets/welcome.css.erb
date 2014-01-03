@@ -1,12 +1,104 @@
+/* ============================
+   Section 0 - Non responsive
+   ============================ */
+   
+.container, body {
+  max-width: none !important;
+  min-width: 750px;
+}
 
-	
+.primary-nav .container .navbar-header,
+.primary-nav .container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
 
+/* Always float the navbar header */
+.primary-nav .navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.primary-nav .navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+
+.primary-nav .navbar-toggle {
+  display: none;
+}
+.primary-nav .navbar-collapse {
+  border-top: 0;
+}
+
+.primary-nav .navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.primary-nav .navbar-nav {
+  float: left;
+  margin: 0;
+}
+.primary-nav .navbar-nav > li {
+  float: left;
+}
+.primary-nav .navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.primary-nav .navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+.primary-nav .navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.primary-nav .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > .active > a,
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.primary-nav .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+.navbar-toggle {position: absolute; right: 0px;}
+   
 /* ============================
    Section 1 - Navbar
    ============================ */
 
 .primary-nav ul.nav {
 	padding-top: 15px;
+}
+.primary-nav {
+	position:absolute!important;
+}
+
+.primary-nav .navbar-brand {
+	
 }
 
 .primary-nav ul.nav li {
@@ -124,6 +216,34 @@ html, body {
 	height:100%;
 }
 
+p {letter-spacing: 0.15px;}
+
+.call-to-action-footer {
+	
+	padding: 25px 0px;
+	background-color:#333;
+}
+
+.call-to-action-caption {
+	display:inline-block;
+	width:70%;
+	color:#fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight:300;
+	padding-top: 5px;
+}
+
+.call-to-action-button {
+	display:inline-block;
+	width:25%;
+	float:right;
+}
+
+.call-to-action-button a {
+	float:right;
+}
 /* ============================
    Section 3 - Footer
    ============================ */
@@ -162,6 +282,54 @@ img.social-icon {
 	width: 32px;
 	height: 32px;
 	margin-left: 10px;
+}
+
+nav.footer-nav ul {
+	list-style:none;
+	padding-left: 0px;
+	margin-right: 15px;
+	opacity: 0.6;
+	transition: opacity 0.25s ease-in-out;
+}
+
+nav.footer-nav ul:hover {
+	opacity: 1;
+	transition: opacity 0.25s ease-in-out;
+}
+
+nav.footer-nav ul li a:hover {
+	cursor:pointer;
+}
+
+nav.footer-nav ul:nth-child(1) {
+	border-top: 3px solid #2797ff;
+	
+}
+
+nav.footer-nav ul:nth-child(2) {
+	border-top: 3px solid #ee086c;
+	
+}
+
+nav.footer-nav ul:nth-child(3) {
+	border-top: 3px solid #f5f818;
+	
+}
+
+nav.footer-nav ul li.footer-nav-heading {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #999;
+}
+
+nav.footer-nav ul li {
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 0.15px;
 }
 
 /* ============================
@@ -291,12 +459,14 @@ p.caption {
 }
 
 a.call-to-action {
-	font-size: 16px;
-	font-weight: 400;
-	padding: 10px 15px;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 10px 15px 8px;
 	border-radius: 5px;
 	border: 1px solid #fff;
 	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	transition: all 0.1s ease-in-out;
 }
 
@@ -327,15 +497,19 @@ a.trial:hover {
    ============================ */
    
 #product-1 {
-	background-color: #1869a8;
+	background-color: #2e9fdb;
 	background-image: url(<%= asset_path 'white-gradient.png' %>);
 	background-position: center center;
 	background-repeat: none;
-	padding-bottom: 25px;
+	padding-bottom: 50px;
 	color: #fff;
-	min-height:100%;
-	max-height: 700px;
 	
+}
+
+#product-1-overview {
+	background-color: #333;
+	margin-top: 0px;
+	color: #fff;
 }
 
 .see-the-features {
@@ -370,7 +544,7 @@ a.trial:hover {
 .dark p.hero-sub-3 {
 	margin: 0px 50px;
 	text-align:center;
-	color: #eee;
+	color: #fff;
 	font-size: 18px;
 	font-weight: 400;
 }
@@ -424,6 +598,13 @@ p.hero-product-caption {
 	border-bottom: 1px solid #ddd;
 }
 
+.nav-pills li a {
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	padding-bottom:6px;
+}
+
 #product-3 {
 	background-color: #000;
 	background-image: url(<%= asset_path 'white-gradient.png' %>);
@@ -433,6 +614,11 @@ p.hero-product-caption {
 	color: #fff;
 	position:relative;
 	
+}
+
+p.other-features-caption {
+	font-size: 16px;
+	font-weight: 400;
 }
 
 .video-overlay {
@@ -467,4 +653,84 @@ video.product-video {
 	margin-bottom:-31px;
 	
 }
+
+/* ============================
+   Section 6 - Programs
+   ============================ */
+   
+#programs-hero {
+	background-image: url(<%= asset_path 'programs-hero.jpg' %>);
+	background-attachment: fixed;
+	background-repeat: none;
+	background-size: cover;
+
+	padding-bottom: 50px;
+	min-height:700px;
+	max-height:800px;
+	height:100%;
+	color: #fff;
+	position: relative;
+}
+
+
+
+body#product-programs .primary-nav .navbar-nav>li>a, body#product-programs .primary-nav .navbar-nav>li>a:hover, body#product-programs .primary-nav .navbar-brand {
+	color:#000;
+}
+
+.programs-hero-caption {
+	position: absolute;
+	width:100%;
+	bottom:0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.5);
+	padding-bottom: 25px;
+	color: #fff;
+}
+
+.programs-hero-caption p {
+	font-size: 18px;
+	margin: 0px auto;
+	width:700px;
+	text-align:center;
+}
+
+#programs-1 {
+	margin: 50px 0px;
+	text-align:center;
+}
+
+#programs-1 hr {
+	margin: 50px 0px;
+}
+
+h3.hero {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #03ae6f;
 	
+}
+
+.extra-space {
+	margin:25px 0px;
+}
+
+h3.hero span.glyphicon {
+	margin-right: 8px;
+	font-size: 12px;
+}
+p.contact {
+	color: #333!important;
+	margin-bottom:20px !important;
+}
+a.contact {
+	color: #03ae6f;
+	border-color: #03ae6f;
+}
+
+a.contact:hover {
+	background-color: #03ae6f;
+	color: #fff;
+}

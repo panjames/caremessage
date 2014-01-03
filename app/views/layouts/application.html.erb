@@ -24,13 +24,16 @@
                 $(".secondary-nav").addClass("secondary-visible");
             }
         });
-    });
+
+        
+     });
 </script>
 	<script type="text/javascript" src="//use.typekit.net/cpt8vwp.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="http://www.designedbyaturtle.co.uk/demos/blur-bg/js/blur.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= body_id %>">
 
    <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top primary-nav" role="navigation">
@@ -72,7 +75,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
           <li><a>Home</a></li>
-          <li><a>Product</a></li>
+          <li><a href="/welcome/product/">Product</a></li>
           <li><a>Solutions</a></li>
           <li><a>About</a></li>
 	      <li><a>Sign In</a></li> 
@@ -90,12 +93,39 @@
 
 <footer>
 <div class=container>
-<span class=footer-logo>caremessage</span>
-<p class=footer-address>
-424 Clay Street, Lower Level<br/>
-San Francisco, CA 94104<br/>
-<a href="mailto:info@caremessage.org" target=_blank>info@caremessage.org</a>
-</p>
+<div class=row>
+<div class=col-xs-12>
+<nav class=footer-nav>
+<ul class="col-xs-3 col-sm-2 col-md-2">
+	<li class=footer-nav-heading>Product</li>
+	<li><a>Platform</a></li>
+	<li><a>Programs</a></li>
+	<li><a>Sample Program</a></li>
+	<li><a>Why Mobile?</a></li>
+</ul>
+
+<ul class="col-xs-3 col-sm-2 col-md-2">
+	<li class=footer-nav-heading>Solutions</li>
+	<li><a>Providers</a></li>
+	<li><a>Payers</a></li>
+	<li><a>Advocates</a></li>
+	<li><a>Researchers</a></li>
+</ul>
+
+<ul class="col-xs-3 col-sm-2 col-md-2">
+	<li class=footer-nav-heading>About</li>
+	<li><a>Our Story</a></li>
+	<li><a>Values</a></li>
+	<li><a>Team</a></li>
+	<li><a>Careers</a></li>
+</ul>
+
+
+
+</nav>
+</div>
+
+</div> <!-- .row -->
 <hr/>
 © 2014 caremessage <div class=social-icons-container>
 <%= image_tag("fb-icon.png", class: "social-icon") %> <%= image_tag("tw-icon.png", class: "social-icon") %>
