@@ -5,9 +5,11 @@ class WelcomeController < ApplicationController
   end
   def solutions
   end
-  def product_patient
+  def mobile
   end
   def about
+  end
+  def sample
   end
   def contact
   end

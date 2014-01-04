@@ -2,9 +2,8 @@
    Section 0 - Non responsive
    ============================ */
    
-.container, body {
-  max-width: none !important;
-  min-width: 750px;
+.container {
+	width: 970px;
 }
 
 .primary-nav .container .navbar-header,
@@ -244,6 +243,8 @@ p {letter-spacing: 0.15px;}
 .call-to-action-button a {
 	float:right;
 }
+
+a:hover {cursor:pointer;}
 /* ============================
    Section 3 - Footer
    ============================ */
@@ -733,4 +734,288 @@ a.contact {
 a.contact:hover {
 	background-color: #03ae6f;
 	color: #fff;
+}
+
+/* ============================
+   Section 7 - Mobile
+   ============================ */
+   
+body#welcome-mobile .container {
+	width: 750px;
+}   
+
+#mobile-hero {
+	background-image: url(<%= asset_path 'mobile-hero.jpg' %>);
+	background-attachment: fixed;
+	background-repeat: none;
+	background-size: cover;
+	padding-bottom: 50px;
+	min-height:700px;
+	max-height:800px;
+	height:100%;
+	color: #fff;
+	position: relative;
+}
+
+.mobile-hero-container {
+	position:absolute;
+	bottom:100px;
+	width: 400px;
+}
+
+#mobile-hero h1.hero {
+	text-align:left;
+	font-weight: 100;
+	margin-bottom: 0px;
+	line-height:110%;
+	font-size: 48px;
+}
+
+h2.author {
+	font-size: 12px;
+	margin-top: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+span.serif-ital {
+	font-family: "ff-tisa-web-pro", serif;
+	font-style:italic;
+	text-transform: none;
+	letter-spacing: 0px;
+}
+
+p.story-hero {
+	font-family: "ff-tisa-web-pro", serif;
+	margin-top: 15px;
+	font-size: 16px;
+}
+
+#mobile-story p, #mobile-story a {font-family: "ff-tisa-web-pro", serif;}
+p.story {
+	
+	font-size: 22px;
+	color: #333;
+	line-height: 150%;
+	margin: 20px 0px;
+}
+
+#mobile-story {
+	margin: 50px 0px;
+}
+
+#mobile-story figure {
+	margin: 50px 0px;
+	
+}
+
+#mobile-story figure figcaption {
+	color: #999;
+	font-size: 16px;
+	width: 75%;
+	margin:0px auto;
+	text-align: center;
+	font-family: "ff-tisa-web-pro", serif;
+	font-style:italic;
+	margin-top: 20px;
+}
+
+#mobile-story .progress {
+	height: 40px;
+}
+
+#mobile-story .progress-bar {
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 15px;
+	line-height: 42px;
+	letter-spacing: 1px;
+}
+
+#mobile-story .progress-bar .glyphicon {
+	margin-right: 5px;
+	}
+	
+object {
+	width:100%;
+	margin-bottom: 15px;
+}
+
+hr {
+	margin: 50px 0px;
+}
+
+h2.story-heading {
+	
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+p.number {
+	font-size: 52px;
+	
+	text-align: center;
+}
+
+p.number-caption {
+	
+	text-align:center;
+	width: 200px;
+	margin: 0px auto;
+	font-style:italic;
+}
+
+a.story {
+	font-size: 16px;
+	font-style:italic;
+	width:100%;
+	display:block;
+}
+
+/* ============================
+   Section 7 - Sample
+   ============================ */
+   
+
+#sample-hero {
+	background-color: #332f5e;
+	background-position: center center;
+	background-repeat: none;
+	padding-bottom: 25px;
+	min-height:700px;
+	max-height:800px;
+	height:100%;
+	color: #fff;
+	position: relative;
+	padding-top: 25px;
+}
+
+#sample-hero h1.hero {
+	text-align:left;
+	font-weight: 100;
+	font-size: 48px;
+}
+
+#sample-2 {margin: 50px 0px;
+}
+
+#sample-2 h1.hero {text-align: left;}
+
+#sample-2 .row {margin: 0px -15px;}
+
+p.hero-sub-sample {
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 15px;
+}
+
+.sweettalk-container {
+	background-image: url(<%= asset_path 'sweettalk-container.png' %>);
+	background-size: cover;
+	width:374px;
+	height: 701px;
+	
+	background-repeat: none;
+	position:relative;
+}
+
+.iphone-msg-container {
+	position:absolute;
+	margin-left: 56px;
+	top:152px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 382px;
+	color: #000;
+	overflow-y: scroll;
+	margin-right: 53px;
+
+}
+
+ul.iphone-conversation {
+	list-style: none;
+	padding-left:0px;
+
+}
+
+ul.iphone-conversation li {
+	font-family: "Helvetica Neue";
+	font-weight:300;
+	
+	display:inline-block;
+	width:100%;
+	border-radius: 20px;
+	line-height: 125%;
+	margin:5px 0px;
+	position:relative;
+	
+}
+ul.iphone-conversation li div {
+	border-radius: 20px;
+	padding:7px 10px 8px;
+	
+	
+	
+}
+
+
+ul.iphone-conversation li .sender {
+	background-color: #e5e5ea;
+	color: #000;
+	display:inline-block;
+	width:80%;
+}
+
+ul.iphone-conversation li .sender:before {
+	position:absolute;
+	background-image: url(<%= asset_path 'chat-corner-grey.png' %>);
+	content: '';
+	background-size: contain;
+	width: 16px;
+	height: 33px;
+	bottom: 1px;
+	left: -6px;
+	padding: 0px;
+	
+}
+
+ul.iphone-conversation li .myself {
+	background-color: #40d02e;
+	color: #fff;
+	display:inline-block;
+	float:right;
+}
+
+ul.iphone-conversation li .myself:before {
+	position:absolute;
+	background-image: url(<%= asset_path 'chat-corner-green.png' %>);
+	content: '';
+	background-position-y: 1px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 19px;
+	bottom: 0px;
+	right: -8px;
+	padding: 0px;
+	}
+	
+ul.conditions {list-style:none; padding:0px; margin-top: 25px;}
+
+ul.conditions li {
+	list-style-type:none;
+	display:inline-block;
+	padding: 5px 10px;
+	border: 1px solid #444;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	color: #444;
+}
+
+h1.hero-grey {
+	margin-top: 0px;
+	color: #999;
+	font-weight: 100;
 }
