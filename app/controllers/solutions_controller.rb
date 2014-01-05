@@ -1,4 +1,8 @@
 class SolutionsController < ApplicationController
-  def index
+  def clinics
+  end
+  def hospitals
+  end
+  def payers
   end
 end

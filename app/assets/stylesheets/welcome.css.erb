@@ -2,8 +2,8 @@
    Section 0 - Non responsive
    ============================ */
    
-.container {
-	width: 970px;
+.container, body {
+	min-width: 750px;
 }
 
 .primary-nav .container .navbar-header,
@@ -543,11 +543,12 @@ a.trial:hover {
 .dark h2.hero-sub {color: #fff;}
 
 .dark p.hero-sub-3 {
-	margin: 0px 50px;
+	margin: 0px auto;
+	width: 100%;
 	text-align:center;
 	color: #fff;
-	font-size: 18px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: 300;
 }
 
 #product-2 {
@@ -881,11 +882,11 @@ a.story {
    Section 7 - Sample
    ============================ */
    
+body#welcome-sample .container {width: 970px;}
+body#welcome-sample {min-width: 970px;}
 
 #sample-hero {
 	background-color: #332f5e;
-	background-position: center center;
-	background-repeat: none;
 	padding-bottom: 25px;
 	min-height:700px;
 	max-height:800px;
@@ -1028,4 +1029,75 @@ h1.hero-grey {
 	margin-top: 0px;
 	color: #999;
 	font-weight: 100;
+}
+
+/* ============================
+   Section 8 - Solutions
+   ============================ */
+
+#solutions-hero {
+	background-color: #222;
+	padding-bottom: 25px;
+	color: #fff;
+	position: relative;
+	text-align:center;
+}
+
+#solutions-hero h3.hero {
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 3px;
+}
+
+#solutions-hero .col-xs-4 {
+	opacity: 0.5;
+	transition: all 0.5s ease-in-out;
+}
+
+#solutions-hero .col-xs-4:hover {
+	opacity: 1;
+	background-color: rgba(255,255,255,0.025);
+	transition: all 0.2s ease-in-out;
+}
+
+#solutions-hero .col-xs-4:active {
+	opacity: 1;
+	background-color: rgba(255,255,255,0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+
+
+p.solutions-caption {
+	font-size: 12px;
+	font-weight: 600;
+	color: #ddd;
+	margin-bottom: 25px;
+}
+
+span.chevron {font-size: 30px;}
+
+/* ============================
+   Section 8.1 - Solutions - Clinics
+   ============================ */
+ 
+.solutions {
+	background-color: #222;
+	padding-bottom: 25px;
+	color: #000;
+	position: relative;
+	text-align:center;
+}
+.solutions h1.hero{
+	font-size: 48px;
+}
+.dark h1.hero-grey {
+	color:#ccc;
+}
+
+p.solutions-caption-specific {
+	font-size: 14px;
+	font-weight: 300;
+	color: #ddd;
+	margin-bottom: 25px;
 }

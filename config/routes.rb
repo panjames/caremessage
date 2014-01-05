@@ -6,6 +6,9 @@ Caremessage::Application.routes.draw do
   get "welcome/solutions"
   get "welcome/mobile"
   get "welcome/sample"
+  get "solutions/clinics"
+  get "solutions/hospitals"
+  get "solutions/payers"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
