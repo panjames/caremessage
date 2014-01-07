@@ -513,6 +513,50 @@ a.trial:hover {
 	color: #fff;
 }
 
+#product-2 .container {
+	margin: 50px auto;
+}
+
+
+#mobile-module {
+	background-image: url(<%= asset_path 'mobile-hero.jpg' %>);
+	background-attachment: fixed;
+	background-repeat: none;
+	background-size: cover;
+	height:450px;
+	color: #fff;
+	position: relative;
+	border-top: 2px solid rgba(0,0,0,0.2);
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	display:table;
+	width:100%;
+}
+
+p.module {
+	display: table-cell;
+	vertical-align: middle;
+	text-align:center;
+	height:100%;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 300;
+	text-shadow: 0px 0px 15px #000;
+}
+
+p.module a {
+	color:#fff;
+	padding: 10px 15px;
+	transition: 0.2s all ease-in-out;
+}
+
+p.module a:hover {
+	background-color: rgba(0,0,0,0.5);
+	text-shadow: none;
+	transition: 0.2s all ease-in-out;
+	color: #ff8500;
+}
+
 .see-the-features {
 	margin-bottom: 50px;
 	text-align:center;
@@ -576,7 +620,7 @@ img.hero-product {
 
 p.hero-product-caption {
 	padding-top: 15px;
-	color: #aaa;
+	color: #777;
 	text-align:center;
 	margin: 0px 75px;
 }
