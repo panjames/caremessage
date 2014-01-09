@@ -1,47 +1,40 @@
 <div id=homepage-1>
-<div class="container body-container">
-
-<h1 class=hero>The world's best patient engagement platform.</h1>
-
-<p class=hero-sub><a class="call-to-action demo">Watch a Demo</a><a class="call-to-action trial">Start a Free Trial</a></p>
-<%= image_tag("hero.png", class: "hero") %>
-
+<%= video_tag "homepage-video.mp4", :controls => false, :autoplay => true, :class => 'homepage-video', :loop => true %>
+<div class=hero-video-overlay>
+<div class=hero-video-overlay-inner>
+<div class=hero-video-overlay-inner-2>
+<h1 class=video-hero>Care, Better, Together.</h1>
+</div>
+</div>
 </div>
 </div> <!--.homepage-1-->
 
-<div id=homepage-2>
+
+
+
+<div id=homepage-2 class=light>
 <div class=container>
-<div class=row>
-<div class="col-md-4 col-sm-4">
-<%= image_tag("remind.png", class: "hero-sub") %>
-<h2 class=hero-sub>Remind</h2>
-<p class=caption>caremessage automates tasks like appointment reminders so you can spend more time having meaningful conversations with your patients.</p>
-</div>
-
-<div class="col-md-4 col-sm-4">
-<%= image_tag("motivate.png", class: "hero-sub") %>
-<h2 class=hero-sub>Motivate</h2>
-<p class=caption>Our content is designed to help and empower high risk chronically ill patients.</p>
-</div>
-
-<div class="col-md-4 col-sm-4">
-<%= image_tag("educate.png", class: "hero-sub") %>
-<h2 class=hero-sub>Educate</h2>
-<p class=caption>We believe in tackling the underlying problems in healthcare and start with educating patients on how to lead healthier lives.</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
+<div class="row extra-space">
+	<div class="col-xs-4">
+	<h3 class=hero>Streamlined Engagement</h3>
+	<p class=other-features-caption>Automate population outreach through text and voice messaging, and save valuable time calling and following up.</p>
+	</div>
+	
+		<div class="col-xs-4">
+	<h3 class=hero>Tailored Messaging</h3>
+	<p class=other-features-caption>Address the chronic disease burden through evidence-based programs designed for the hardest to manage populations.</p>
+	</div>
+	
+	<div class="col-xs-4">
+	<h3 class=hero>Robust Care Network</h3>
+	<p class=other-features-caption>Strengthen the bonds between patients and their extended care family, including providers, payers and caregivers.</p>
+	</div>
+	
+</div> <!--.row-->
 
 
 
-<div id=homepage-3>
-<div class=container>
-
-
+<hr/>
 <div class="row supporters">
 <div class="col-xs-2"><%= image_tag("gs-logo.png", class: "supporter-logo") %></div>
 <div class="col-xs-2"><%= image_tag("yc-logo.png", class: "supporter-logo") %></div>
@@ -54,4 +47,4 @@
 
 </div>
 
-</div>
+</div> <!--.homepage-3-->
