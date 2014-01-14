@@ -89,6 +89,28 @@
    Section 1 - Navbar
    ============================ */
 
+.navbar .glyphicon {
+	float:right;
+}
+
+.navbar .glyphicon-container {
+	font-size: 14px;
+	float: right;
+	padding-top: 2px;
+	position: absolute;
+	width: 87%;
+	height: 30px;
+	top: 10px;
+	z-index: 1000;
+	opacity:0;
+}
+
+.navbar .glyphicon-container:hover {
+	opacity:1;
+}
+
+.primary-nav img.logo-main {height: 30px; margin-top: 10px;}
+
 .primary-nav ul.nav {
 	padding-top: 15px;
 }
@@ -121,7 +143,7 @@
 .primary-nav .navbar-nav>li>a {color: #fff;}
 .primary-nav .navbar-nav>li>a:hover {color: #fff; }
 
-.primary-nav ul.nav li:hover {
+.primary-nav ul.nav li:hover, .primary-nav ul.nav>li.open {
 	cursor:pointer;
 	border-top: 3px solid #ff8500;
 	transition: all 0.1s ease-in-out;
@@ -139,6 +161,102 @@
 
 .primary-nav .navbar-brand {
 	color:#fff;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus { background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+background-color: transparent;
+color:#fff;
+}
+
+.navbar-nav>li>.dropdown-menu li {
+	text-transform: none;
+	letter-spacing: 0px;
+}
+
+.navbar-nav>li>.dropdown-menu li:hover {
+	border: 0px solid transparent;
+	background-color:transparent;
+	color: #ff8500;
+}
+
+
+.navbar-nav>li>.dropdown-menu li a {
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	z-index: 100;
+}
+
+
+.navbar-nav>li>.dropdown-menu li a:hover:before {
+	font-family: 'Glyphicons Halflings';
+	-webkit-font-smoothing: antialiased;
+	content: "\e131";
+	font-size: 14px;
+	position:absolute;
+	animation: menuicon 0.5s;
+	-webkit-animation: menuicon 0.5s; /* Safari and Chrome */
+	right: 10px;
+
+
+}
+
+@keyframes menuicon
+{
+from {right: 0px; opacity: 0}
+to {right: 10px; opacity: 1}
+}
+
+@-webkit-keyframes menuicon /* Safari and Chrome */
+{
+from {right: 0px; opacity: 0}
+to {right: 10px; opacity: 1}
+}
+
+.navbar-nav>li>.dropdown-menu li a:hover {
+	background-color:transparent;
+	color: #ff8500;
+
+}
+
+.navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:visited,  .navbar-default .navbar-nav>.open>a:link {
+	color:#fff!important;
+}
+
+.navbar-nav>li>.dropdown-menu {
+	top: 40px;
+	border: 0px solid transparent;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	background-color: rgba(255,255,255,0.95);
+	background-color: rgba(0,0,0,0.75);
+}
+
+.secondary-nav .navbar-nav>li>.dropdown-menu {
+	
+}
+
+.navbar-nav>li>.dropdown-menu:before {
+	content: '';
+	position: absolute;
+	right: 20px;
+	top: -7px;
+	width: 0;
+	height: 0;
+	border-bottom: 7px solid rgba(0,0,0,0.75);
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+}
+
+.primary-nav b.caret {
+	border-top: 6px solid #fff;
+	border-top-color: #fff !important;
+	border-bottom-color: #fff !important;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
 }
 
 .visible {
@@ -164,7 +282,7 @@
 	margin-top: -50px;
 }
 
-.secondary-nav ul.nav li {
+.secondary-nav ul.nav>li {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 500;
