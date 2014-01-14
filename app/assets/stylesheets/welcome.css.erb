@@ -1,3 +1,48 @@
+
+nav.experimental {
+	position: fixed;
+	width: 320px;
+	height:100%;
+	z-index:10000;
+	padding: 50px 30px;
+	background-color: rgba(10,10,10,0.9);
+	right:-320px;
+	transition: all 0.3s ease;
+}
+
+nav.show {
+	
+	right:0;
+	transition: all 0.3s ease;
+}
+
+nav.experimental ul {
+	list-style: none;
+	padding: 0px;
+}
+
+nav.experimental ul li {
+	color: #fff;
+}
+
+nav.experimental ul li:nth-child(1){
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+}
+
+.moveleft {
+	-webkit-filter: grayscale(0.7) blur(2px);
+	transition: all 0.3s ease;
+}
+
+.moveleft-container {
+	margin-right:350px;
+	transition: margin-right 0.3s ease;
+}
+
+master {transition: all 0.3s ease; position:relative;}
+
 /* ============================
    Section 0 - Non responsive
    ============================ */

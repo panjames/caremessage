@@ -6,6 +6,8 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   
   <script type=text/javascript>
+  
+  	
     jQuery(document).ready(function () {
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
@@ -24,9 +26,33 @@
                 $(".secondary-nav").addClass("secondary-visible");
             }
         });
+        
+        $('.open-menu').on('click', function(e){
+	        $('.master').addClass('moveleft');
 
+		 	$('nav.experimental').addClass('show');
+		 	
+		 	
+		
+		});
+		
+
+		$(document).mouseup(function (e)
+		{
+		    var container = $("nav.experimental");
+		
+		    if (!container.is(e.target) // if the target of the click isn't the container...
+		        && container.has(e.target).length === 0) // ... nor a descendant of the container
+		    {
+		        container.removeClass('show');
+		        $('.master').removeClass('moveleft');
+	            $('.navbar').removeClass('moveleft');
+		    }
+		});
         
      });
+     
+
      
 </script>
 	<script type="text/javascript" src="//use.typekit.net/cpt8vwp.js"></script>
@@ -34,11 +60,26 @@
 
   <%= csrf_meta_tags %>
 </head>
+
+
 <body id="<%= body_id %>">
+
+	<nav class=experimental>
+	<ul>
+	<li>Navigation</li>
+	<li>Home</li>
+	<li>Product</li>
+	<li>Partners</li>
+	<li>About</li>
+
+	</ul>
+	</nav>
+
+   <div class=master>
 
    <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top primary-nav" role="navigation">
-      <div class="container">
+      <div class="container navbar-container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -51,28 +92,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-          <li><a>Home</a></li>       
-          <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Product</a>
-	        <ul class="dropdown-menu">
-	          <li><a href="#">Platform</a></li>
-	          <li><a href="#">Programs</a></li>
-	        </ul>
-	      </li> <!--.li-dropdown-->
-          <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners</a>
-	        <ul class="dropdown-menu">
-	          <li><a href="#">Overview</a></li>
-	          <li class="divider"></li>
-	          <li><a href="#">Clinics</a></li>
-	          <li><a href="#">Hospitals</a></li>
-	          <li><a href="#">Payers</a></li>
-	          <li><a href="#">Advocates</a></li>
-	          <li><a href="#">Researchers</a></li>
-	          <li><a href="#">Government</a></li>
-	        </ul>
-	      </li> <!--.li-dropdown-->
-          <li><a>About</a></li> 
+          <li><a class=open-menu>Menu</a></li>       
 	      </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -170,6 +190,8 @@
 </div>
 </footer>
 
+
+   </div> <!--.master-->
 </body>
 
 <script>
