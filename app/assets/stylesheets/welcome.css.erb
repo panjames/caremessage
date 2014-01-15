@@ -151,7 +151,7 @@ nav.show-left {
 
 /* CONTACT FORM */
 
-.contact-overlay form input, .contact-overlay form textarea {
+input, textarea {
 	font-family: 'Proxima Nova', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	border: 0px;
 	border-radius: 0px;
@@ -164,28 +164,39 @@ nav.show-left {
 	font-weight: 300;
 	outline-width: 0;
 	margin: 5px 0px;
+	transition: border-left 0.5s ease;
 }
 
-.contact-overlay form input.submit {
-	border-left: 0px solid transparent;
-	margin-top: 20px;
+input:focus, textarea:focus {
+	border-left: 3px solid #ff8500;
+	transition: border-left 0.5s ease;
+}
+
+
+input.submit {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 10px 15px 8px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	color: #fff;
 	text-transform: uppercase;
-	color:#ccc;
-	letter-spacing: 2px;
-	font-size:14px;
-	transition: all 0.5s ease;
+	letter-spacing: 1px;
+	transition: all 0.1s ease-in-out;
+	color: #03ae6f;
+	border-color: #03ae6f;
+	margin-top: 15px;
 }
 
-.contact-overlay form input.submit:hover {
-	color:#fff;
-	background-color: #444;
-	transition: all 0.5s ease;
+input.submit:hover {
+	background-color: #03ae6f;
+	color: #fff;
 }
 
-.contact-overlay form input.submit:active {
-	background-color: #333;
-	transition: all 0.5s ease;
+input.submit:active {
+	background-color: #00a065;
 }
+
 
 .contact-overlay form input {
 	padding-left: 15px;
@@ -203,6 +214,7 @@ nav.show-left {
 .master {
 	transition: all 1s ease; 
 	position:relative;
+	min-width: 750px;
 	}
 
 /* ============================
@@ -312,7 +324,7 @@ nav.show-left {
 	position: absolute;
 	height: 20px;
 	top: 9px;
-	right: 35px;
+	right: 47px;
 	letter-spacing: 2px;
 	animation: menulabel 0.3s;
 	-webkit-animation: menulabel 0.3s; /* Safari and Chrome */
@@ -327,7 +339,7 @@ nav.show-left {
 	position: absolute;
 	height: 20px;
 	top: 19px;
-	right: 35px;
+	right: 47px;
 	letter-spacing: 2px;
 	animation: menulabel 0.3s;
 	-webkit-animation: menulabel 0.3s; /* Safari and Chrome */
@@ -336,13 +348,13 @@ nav.show-left {
 @keyframes menulabel
 {
 from {right: 0px; opacity: 0}
-to {right: 35px; opacity: 1}
+to {right: 47px; opacity: 1}
 }
 
 @-webkit-keyframes menulabel /* Safari and Chrome */
 {
 from {right: 0px; opacity: 0}
-to {right: 35px; opacity: 1}
+to {right: 47px; opacity: 1}
 }
 
 #contact-form-toggle a.open-contact:hover:after {
@@ -456,10 +468,10 @@ to {left: 27px; opacity: 1}
 	margin: 0px 10px;
 }
 
-.primary-nav ul.nav li a {
+.primary-nav ul.nav li a{
 	padding-top: 5px;
 	padding-left: 2px;
-	padding-right: 2px;
+	padding-right: 15px;
 
 	
 }
@@ -649,7 +661,7 @@ to {right: 10px; opacity: 1}
 .secondary-nav ul.nav li a {
 	padding-top: 15px;
 	padding-left: 2px;
-	padding-right: 2px;
+	padding-right: 15px;
 	transition: color 0.5s ease;
 	
 }
@@ -713,6 +725,9 @@ p {letter-spacing: 0.15px;}
 }
 
 a:hover {cursor:pointer;}
+
+p.hero-sub-3 sup {font-size: 12px;}
+
 /* ============================
    Section 3 - Footer
    ============================ */
@@ -807,7 +822,15 @@ nav.footer-nav ul li {
    
 body#welcome-index .container {
 	width: 970px;
-}   
+}
+
+body#welcome-index .master {
+	min-width: 970px;
+}
+
+body#welcome-index .secondary-nav .container {
+	min-width: inherit;
+}
 
 #homepage-1 {
 	min-width:970px;
@@ -853,9 +876,24 @@ h1.video-hero {
 }
 
 #homepage-2 {
-	
 	padding: 50px 0px;
-	
+	text-align:center;
+}
+
+
+#homepage-2 h1.hero {
+	width: 70%;
+	margin: 15px auto;
+}
+
+#homepage-2 p.hero-sub-3 {
+	width: 70%;
+	margin: 0px auto;
+}
+
+
+#homepage-2 a:hover {
+	color: #ff8500
 }
 
 #homepage-3 {
@@ -983,6 +1021,7 @@ a.call-to-action:hover {
 	cursor:pointer;
 }
 
+
 a.demo {
 	border: 1px solid #fffce3;
 	color: #fffce3;
@@ -992,6 +1031,7 @@ a.demo:hover {
 	background-color: #fffce3;
 	color: #333;
 }
+
 
 a.trial:hover {
 	background-color: #fff;
@@ -1285,6 +1325,10 @@ a.contact {
 a.contact:hover {
 	background-color: #03ae6f;
 	color: #fff;
+}
+
+a.contact:active {
+	background-color: #00a065;
 }
 
 /* ============================
@@ -1586,17 +1630,20 @@ h1.hero-grey {
    ============================ */
 
 #solutions-hero {
-	background-color: #222;
+	background-image: url(<%= asset_path 'solutions-bg@2X.png' %>);
+	background-repeat: repeat;
+	background-size: 200px;
 	padding-bottom: 25px;
+	background-attachment: fixed;
+	padding-bottom: 50px;
 	color: #fff;
-	position: relative;
-	text-align:center;
 }
 
 #solutions-hero h3.hero {
 	font-size: 24px;
 	font-weight: 300;
 	margin-bottom: 3px;
+	color: #50ff47;
 }
 
 #solutions-hero .col-xs-4 {
@@ -1606,7 +1653,7 @@ h1.hero-grey {
 
 #solutions-hero .col-xs-4:hover {
 	opacity: 1;
-	background-color: rgba(255,255,255,0.025);
+	background-color: rgba(255,255,255,0.1);
 	transition: all 0.2s ease-in-out;
 }
 
@@ -1632,8 +1679,11 @@ span.chevron {font-size: 30px;}
    ============================ */
  
 .solutions {
-	background-color: #222;
+	background-image: url(<%= asset_path 'solutions-bg@2X.png' %>);
+	background-repeat: repeat;
+	background-size: 200px;
 	padding-bottom: 25px;
+	background-attachment: fixed;
 	color: #000;
 	position: relative;
 	text-align:center;
@@ -1651,3 +1701,92 @@ p.solutions-caption-specific {
 	color: #ddd;
 	margin-bottom: 25px;
 }
+
+/* ============================
+   Section 9 - Customized mailchimp form
+   ============================ */
+   
+#mc_embed_signup input {
+	display:inline-block;
+	padding-left: 15px;
+	height: 40px;
+}
+
+#mc_embed_signup .clear {
+	display: inline-block;
+	width:100%;
+}
+
+#mc_embed_signup input.button {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 10px 15px 8px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.1s ease-in-out;
+	color: #03ae6f;
+	border-color: #03ae6f;
+}
+
+#mc_embed_signup input.button:hover {
+	background-color: #03ae6f;
+	color: #fff;
+}
+
+#mc_embed_signup input.button:active {
+	background-color: #00a065;
+}
+
+#mc_embed_signup .call-to-action-caption {
+	display:inline-block;
+	width:100%;
+	margin-bottom: 10px;
+}
+
+/* ============================
+   Section 10 - Responsive Fixes
+   ============================ */
+   
+@media (max-width: 970px) {
+	.secondary-nav .container .navbar-header {
+	text-align:left!important;
+	}
+	
+	.secondary-nav .container {
+	width:100%!important;
+	}
+	
+	
+	
+	.secondary-nav #contact-form-toggle {
+		right:50px;
+		display:block!important;
+		position: absolute;
+		left: inherit!important;
+	}
+	
+	.secondary-nav a.open-contact:hover:after {display:none;}
+	
+	.secondary-nav a.open-menu:hover:before {display:none;}
+	
+	
+
+}
+
+@media (max-width: 767px) {
+
+	.secondary-nav #menu-toggle {
+		display:block!important;
+		position: absolute;
+		right: 0px;
+		top: -16px!important;
+	}
+	
+	.secondary-nav #contact-form-toggle {
+		top: -16px!important;
+	}
+}
+
