@@ -1,6 +1,6 @@
 Caremessage::Application.routes.draw do
   get "solutions/index"
-  get "product/programs"
+  get "welcome/programs"
   get "welcome/index"
   get "welcome/product"
   get "welcome/solutions"

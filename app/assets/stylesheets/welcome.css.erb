@@ -820,15 +820,15 @@ nav.footer-nav ul li {
    Section 4 - Homepage
    ============================ */
    
-body#welcome-index .container {
+.container {
 	width: 970px;
 }
 
-body#welcome-index .master {
+.master {
 	min-width: 970px;
 }
 
-body#welcome-index .secondary-nav .container {
+.secondary-nav .container {
 	min-width: inherit;
 }
 
@@ -1476,37 +1476,37 @@ a.story {
    Section 7 - Sample
    ============================ */
    
-body#welcome-sample .container {width: 970px;}
-body#welcome-sample {min-width: 970px;}
+body#welcome-programs .container {width: 970px;}
+body#welcome-programs {min-width: 970px;}
 
 #sample-hero {
 	background-color: #332f5e;
-	padding-bottom: 25px;
 	min-height:700px;
-	max-height:800px;
-	height:100%;
 	color: #fff;
 	position: relative;
-	padding-top: 25px;
+	padding: 50px 0px;
 }
 
 #sample-hero h1.hero {
-	text-align:left;
 	font-weight: 100;
 	font-size: 48px;
 }
 
-#sample-2 {margin: 50px 0px;
+#sample-2 {margin: 25px 0px; text-align:center;
 }
-
-#sample-2 h1.hero {text-align: left;}
 
 #sample-2 .row {margin: 0px -15px;}
 
 p.hero-sub-sample {
-	font-size: 18px;
-	font-weight: 300;
+	font-size: 14px;
+	font-weight: 400;
 	margin-bottom: 15px;
+	text-align:center;
+	color: #ccc;
+}
+
+#sample-hero .row {
+	padding: 50px 0px;
 }
 
 .sweettalk-container {
@@ -1514,7 +1514,15 @@ p.hero-sub-sample {
 	background-size: cover;
 	width:374px;
 	height: 701px;
-	
+	background-repeat: none;
+	position:relative;
+}
+
+.program-2-container {
+	background-image: url(<%= asset_path 'program-2-container.png' %>);
+	background-size: cover;
+	width:374px;
+	height: 701px;
 	background-repeat: none;
 	position:relative;
 }
@@ -1539,7 +1547,7 @@ ul.iphone-conversation {
 }
 
 ul.iphone-conversation li {
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif !important;
 	font-weight:300;
 	display:inline-block;
 	width:100%;
@@ -1619,10 +1627,39 @@ ul.conditions li {
 	color: #444;
 }
 
+div.sender, div.myself {
+	font-family: "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
 h1.hero-grey {
 	margin-top: 0px;
 	color: #999;
 	font-weight: 100;
+}
+
+#sample-hero ul.nav li.active a{
+	color: #fff!important;
+}
+
+#sample-hero ul.nav li a{
+	color: #aaa;
+	}
+
+#sample-hero ul.nav {
+	margin: 20px auto;
+	text-align: center;
+	display: block;
+	width: 95px;
+}
+
+#sample-hero h2.hero {
+	text-align: center;
+	font-weight: 600;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 /* ============================
@@ -1744,6 +1781,10 @@ p.solutions-caption-specific {
 	display:inline-block;
 	width:100%;
 	margin-bottom: 10px;
+	text-transform: none;
+	letter-spacing: 0px;
+	font-size: 32px;
+	font-weight: 100;
 }
 
 /* ============================
