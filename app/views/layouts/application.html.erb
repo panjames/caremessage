@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Caremessage</title>
+  <title>caremessage</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   
@@ -22,23 +22,23 @@
 	<li><a class=toggle data-toggle="collapse" href="#product-collapse">Product</a></li>
 	<div id="product-collapse" class="panel-collapse collapse">
 		<ul class=sub>
-		<li><a class=navigation>Platform</a></li>
-		<li><a class=navigation>Programs</a></li>
+		<li><a class="navigation close-menu" href=/welcome/platform>Platform</a></li>
+		<li><a class="navigation close-menu" href=/welcome/programs>Programs</a></li>
 		</ul>
 	</div>
 	<li><a class=toggle data-toggle="collapse" href="#partners-collapse">Partners</a></li>
 	<div id="partners-collapse" class="panel-collapse collapse">
 		<ul class=sub>
 		<li><a class="navigation close-menu" href=/welcome/partners/>Overview</a></li>
-		<li><a class=navigation>Clinics</a></li>
-		<li><a class=navigation>Hospitals</a></li>
-		<li><a class=navigation>Payers</a></li>
-		<li><a class=navigation>Advocates</a></li>
-		<li><a class=navigation>Researchers</a></li>
-		<li><a class=navigation>Government</a></li>	
+		<li><a class="navigation close-menu" href=/partners/clinics/>Clinics</a></li>
+		<li><a class="navigation close-menu" href=/partners/hospitals/>Hospitals</a></li>
+		<li><a class="navigation close-menu" href=/partners/payers/>Payers</a></li>
+		<li><a class="navigation close-menu" href=/partners/organizers/>Organizers</a></li>
+		<li><a class="navigation close-menu" href=/partners/researchers/>Researchers</a></li>
+		<li><a class="navigation close-menu" href=/partners/government/>Government</a></li>	
 		</ul>
 	</div>
-	<li><a class=navigation>About</a></li>
+	<li><a cclass="navigation close-menu" href=/welcome/about>About</a></li>
 
 	</ul>
 	</nav>
@@ -127,26 +127,25 @@
 <nav class=footer-nav>
 <ul class="col-xs-3 col-sm-2 col-md-2">
 	<li class=footer-nav-heading>Product</li>
-	<li><a>Platform</a></li>
-	<li><a>Programs</a></li>
-	<li><a>Sample Program</a></li>
-	<li><a>Why Mobile?</a></li>
+	<li><a href=/welcome/platform/>Platform</a></li>
+	<li><a href=/welcome/programs/>Programs</a></li>
+	<li><a href=/welcome/mobile/>Why Mobile?</a></li>
 </ul>
 
 <ul class="col-xs-3 col-sm-2 col-md-2">
 	<li class=footer-nav-heading>Partners</li>
-	<li><a>Clinics</a></li>
-	<li><a>Hospitals</a></li>
-	<li><a>Payers</a></li>
-	<li><a>Organizers</a></li>
-	<li><a>Researchers</a></li>
-	<li><a>Government</a></li>
+	<li><a href=/partners/clinics/>Clinics</a></li>
+	<li><a href=/partners/hospitals/>Hospitals</a></li>
+	<li><a href=/partners/payers/>Payers</a></li>
+	<li><a href=/partners/organizers/>Organizers</a></li>
+	<li><a href=/partners/researchers/>Researchers</a></li>
+	<li><a href=/partners/government/>Government</a></li>
 </ul>
 
 <ul class="col-xs-3 col-sm-2 col-md-2">
 	<li class=footer-nav-heading>About</li>
-	<li><a>Team</a></li>
-	<li><a>Values</a></li>
+	<li><a href=/welcome/about>Team</a></li>
+	<li><a href=/welcome/about>Values</a></li>
 
 </ul>
 
@@ -221,16 +220,36 @@
 		
 		$('.solutions-body').blurjs({
 			radius: 100,
-			overlay: 'rgba(0,0,0,0.3)',
+			overlay: 'rgba(0,0,0,0.5)',
+			offset: {			//Pixel offset of background-position
+				x: 0,
+				y: 0,
+			},
+		});
+		
+		$('.programs-hero-caption').blurjs({
+			source: '#programs-hero',
+			radius: 100,
+			overlay: 'rgba(0,0,0,0.5)',
 			offset: {			//Pixel offset of background-position
 				x: 0,
 				y: 0,
 			},
 		});
 
+		$('#bio-container').blurjs({
+			source: '#about-hero',
+			radius: 100,
+			overlay: 'rgba(0,0,0,0.2)',
+			offset: {			//Pixel offset of background-position
+				x: 0,
+				y: 0,
+			},
+		});
         
      });
 </script>
+    
 
 <script type='text/javascript'>//<![CDATA[ 
 $(function(){

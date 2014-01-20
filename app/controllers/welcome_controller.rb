@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
   end
-  def product
+  def platform
   end
   def partners
   end
