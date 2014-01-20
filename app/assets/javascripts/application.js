@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require blur
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
 //= require easing
-

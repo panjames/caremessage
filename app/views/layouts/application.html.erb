@@ -16,7 +16,7 @@
 <body id="<%= body_id %>">
 
 	<nav class="menu-overlay dark large-overlay">
-	<h1 class=nav-hero>Menu <span class="glyphicon glyphicon-remove-circle close-menu"></span></h1>
+	<h1 class=nav-hero>Menu <span class="close-menu x-icon">&times</span></h1>
 	<ul class=main>
 	<li><a class=navigation>Home</a></li>
 	<li><a class=toggle data-toggle="collapse" href="#product-collapse">Product</a></li>
@@ -29,7 +29,7 @@
 	<li><a class=toggle data-toggle="collapse" href="#partners-collapse">Partners</a></li>
 	<div id="partners-collapse" class="panel-collapse collapse">
 		<ul class=sub>
-		<li><a class="navigation close-menu" href=/welcome/solutions/>Overview</a></li>
+		<li><a class="navigation close-menu" href=/welcome/partners/>Overview</a></li>
 		<li><a class=navigation>Clinics</a></li>
 		<li><a class=navigation>Hospitals</a></li>
 		<li><a class=navigation>Payers</a></li>
@@ -44,7 +44,7 @@
 	</nav>
 	
 	<nav class="contact-overlay dark large-overlay">
-	<h1 class=nav-hero>Contact Us <span class="glyphicon glyphicon-remove-circle close-menu"></span></h1>
+	<h1 class=nav-hero>Contact Us <span class="close-menu x-icon">&times</span></h1>
 	<form>
 	<input type="text" name="firstname" placeholder="First Name">
 	<input type="text" name="lastname" placeholder="Last Name">
@@ -90,7 +90,7 @@
     <!--End Navbar-->
     
        <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top secondary-nav secondary-visible" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top secondary-nav secondary-hidden" role="navigation">
       <div class="container navbar-container">
      
         <div class="navbar-collapse collapse" id=contact-form-toggle>
@@ -138,17 +138,16 @@
 	<li><a>Clinics</a></li>
 	<li><a>Hospitals</a></li>
 	<li><a>Payers</a></li>
-	<li><a>Advocates</a></li>
+	<li><a>Organizers</a></li>
 	<li><a>Researchers</a></li>
 	<li><a>Government</a></li>
 </ul>
 
 <ul class="col-xs-3 col-sm-2 col-md-2">
 	<li class=footer-nav-heading>About</li>
-	<li><a>Our Story</a></li>
-	<li><a>Values</a></li>
 	<li><a>Team</a></li>
-	<li><a>Careers</a></li>
+	<li><a>Values</a></li>
+
 </ul>
 
 
@@ -169,6 +168,7 @@
 </body>
 
 <script>
+
     jQuery(document).ready(function () {
         /*$(window).scroll(function () {
             var scroll = $(window).scrollTop();
@@ -179,12 +179,13 @@
             }
         }); */
         
+        
+        
+        
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
-            if (scroll >= 200) {
-                $(".secondary-nav").removeClass("secondary-visible");
-            } else if (scroll < 200) {
-                $(".secondary-nav").addClass("secondary-visible");
+            if (scroll < 200) {
+                $(".secondary-nav").removeClass("secondary-visible").addClass("secondary-hidden");
             }
         });
         
@@ -217,7 +218,62 @@
 		        $('.master').removeClass('moveleft');
 		    }
 		});
+		
+		$('.solutions-body').blurjs({
+			radius: 100,
+			overlay: 'rgba(0,0,0,0.3)',
+			offset: {			//Pixel offset of background-position
+				x: 0,
+				y: 0,
+			},
+		});
+
         
      });
 </script>
+
+<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+         $(".secondary-nav").removeClass("secondary-visible").addClass("secondary-hidden");
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height() && $(window).scrollTop()>201) {
+             $(".secondary-nav").addClass("secondary-visible").removeClass("secondary-hidden");
+        }
+    }
+    
+    lastScrollTop = st;
+}
+});//]]>  
+
+</script>
+
 </html>

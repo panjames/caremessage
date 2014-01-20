@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   end
   def product
   end
-  def solutions
+  def partners
   end
   def mobile
   end

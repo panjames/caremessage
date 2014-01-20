@@ -13,6 +13,7 @@
 	font-size: 28px;
 	color: #fff;
 	margin-bottom: 30px;
+	position: relative;
 }
 
 .large-overlay h1.nav-hero span.glyphicon {
@@ -209,6 +210,20 @@ input.submit:active {
 	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+span.x-icon {
+	float: right;
+	right: 0px;
+	font-size: 48px;
+	bottom: -13px;
+	position: absolute;
+	color:#555;
+}
+
+span.x-icon:hover {
+	color:#fff;
+	cursor: pointer;
 }
 
 .master {
@@ -435,13 +450,13 @@ to {left: 27px; opacity: 1}
 
 .primary-nav #menu-toggle {
 	position:absolute;
-	right: 0px;
+	right: -9px;
 	top: -7px;
 }
 
 .primary-nav #contact-form-toggle {
 	position:absolute;
-	left: 0px;
+	left: -9px;
 	top: -7px;
 }
 
@@ -613,13 +628,13 @@ to {right: 10px; opacity: 1}
 
 .secondary-nav #menu-toggle {
 	position:absolute;
-	right: 0px;
+	right: -9px;
 	top: -7px;
 }
 
 .secondary-nav #contact-form-toggle {
 	position:absolute;
-	left: 0px;
+	left: -9px;
 	top: -7px;
 }
 
@@ -633,14 +648,17 @@ to {right: 10px; opacity: 1}
 	background-color: f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	background-color: rgba(255,255,255,0.95);
-	
+
+}
+
+.secondary-hidden {
+	display:block;
+	transition: all 0.3s ease-in-out;
+	top:-50px;
 }
 
 .secondary-visible {
-	opacity: 0;
-	display:block;
-	transition: all 0.3s ease-in-out;
-	margin-top: -50px;
+	top:0px;
 }
 
 .secondary-nav ul.nav>li {
@@ -733,7 +751,7 @@ p.hero-sub-3 sup {font-size: 12px;}
    ============================ */
    
 footer {
-	background-color:#444;
+	background-color:#333;
 	padding: 40px 0px;
 	color: #fff;
 }
@@ -1711,15 +1729,41 @@ p.solutions-caption {
 
 span.chevron {font-size: 30px;}
 
+.solutions-header {
+	min-height: 600px;
+	background-size: cover;
+	display:table;
+	width:100%;
+}
+
+.solutions-header .container {
+	display:table-cell;
+	vertical-align: middle;
+	background-color: rgba(0,0,0,0.25);
+	padding-bottom:50px;
+}
+
+.solutions-header p.hero-sub-3 {
+	width: 700px;
+}
+
+.solutions-header h1.hero {
+	margin-top: 0px;
+}
+
+.solutions-body {
+	background-color: #444;
+	padding: 50px 0px;
+	text-align:center;
+	background-size:cover;
+	background-position-y: -40px;
+}
+
 /* ============================
    Section 8.1 - Solutions - Clinics
    ============================ */
  
 .solutions {
-	background-image: url(<%= asset_path 'solutions-bg@2X.png' %>);
-	background-repeat: repeat;
-	background-size: 200px;
-	padding-bottom: 25px;
 	background-attachment: fixed;
 	color: #000;
 	position: relative;
@@ -1738,6 +1782,31 @@ p.solutions-caption-specific {
 	color: #ddd;
 	margin-bottom: 25px;
 }
+
+/* ============================
+   Section 8.5 - Solutions - Researchers
+   ============================ */
+   
+body#partners-researchers {
+	background-image: url(<%= asset_path 'solutions-researchers.jpg' %>);
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
+
+   }
+
+
+
+/* ============================
+   Section 8.6 - Solutions - Government
+   ============================ */
+   
+body#partners-government {
+	background-image: url(<%= asset_path 'solutions-govt.jpg' %>);
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
+   }
 
 /* ============================
    Section 9 - Customized mailchimp form
