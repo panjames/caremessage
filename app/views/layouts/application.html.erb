@@ -18,7 +18,7 @@
 	<nav class="menu-overlay dark large-overlay">
 	<h1 class=nav-hero>Menu <span class="close-menu x-icon">&times</span></h1>
 	<ul class=main>
-	<li><a class=navigation>Home</a></li>
+	<li><a class="navigation close-menu" href="http://caremessage.org/">Home</a></li>
 	<li><a class=toggle data-toggle="collapse" href="#product-collapse">Product</a></li>
 	<div id="product-collapse" class="panel-collapse collapse">
 		<ul class=sub>
@@ -160,7 +160,7 @@
 </div> <!-- .row -->
 <hr/>
 © 2014 caremessage <div class=social-icons-container>
-<%= image_tag("fb-icon.png", class: "social-icon") %> <%= image_tag("tw-icon.png", class: "social-icon") %>
+<a href="http://facebook.com/caremessage/" target=_blank><%= image_tag("fb-icon.png", class: "social-icon") %> <a href="http://twitter.com/caremessage/" target=_blank><%= image_tag("tw-icon.png", class: "social-icon") %></div>
 </div>
 </div>
 </footer>
@@ -249,9 +249,17 @@
 				y: 0,
 			},
 		});*/
-        
      });
+     
+     $(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
+		});
 </script>
+
+
     
 
 <script type='text/javascript'>//<![CDATA[ 

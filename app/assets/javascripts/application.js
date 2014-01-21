@@ -20,9 +20,7 @@
 //= require stellar
 
 
-		$(function(){
-			$.stellar({
-				horizontalScrolling: false,
-				verticalOffset: 40
-			});
-		});
+$(function ()  
+{ $("a.read-bio").popover();  
+}); 
+
