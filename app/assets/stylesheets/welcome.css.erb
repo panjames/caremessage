@@ -1024,6 +1024,7 @@ p.hero-sub a:nth-child(1) {
 
 p.caption {
 	text-align: center;
+	font-size: 16px;
 }
 
 a.call-to-action {
@@ -1312,6 +1313,13 @@ body#product-programs .primary-nav .navbar-nav>li>a, body#product-programs .prim
 	width:700px;
 }
 
+.programs-hero-caption p.programs-tomasa {
+	font-size: 14px;
+	padding-top: 10px;
+	margin: 0px auto;
+	width:700px;
+	color: #aaa;
+}
 .programs-hero-caption .row p {
 	width: 100%;
 }
@@ -1689,7 +1697,7 @@ h1.hero-grey {
 	margin: 20px auto;
 	text-align: center;
 	display: block;
-	width: 95px;
+	width: 97px;
 }
 
 #sample-hero h2.hero {
@@ -1707,34 +1715,40 @@ h1.hero-grey {
    ============================ */
 
 #solutions-hero {
-	background-image: url(<%= asset_path 'solutions-bg@2X.png' %>);
-	background-repeat: repeat;
-	background-size: 200px;
-	padding-bottom: 25px;
-	background-attachment: fixed;
-	padding-bottom: 50px;
+	background-image: url(<%= asset_path 'partners-hero.jpg' %>);
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
 	color: #fff;
 }
 
-#solutions-hero h3.hero {
+#solutions-body {
+	background-image: url(<%= asset_path 'partners-hero-blur.jpg' %>);
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
+	border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+#solutions-body h3.hero {
 	font-size: 24px;
 	font-weight: 300;
 	margin-bottom: 3px;
 	color: #50ff47;
 }
 
-#solutions-hero .col-xs-4 {
+#solutions-body .col-xs-4 {
 	opacity: 0.5;
 	transition: all 0.5s ease-in-out;
 }
 
-#solutions-hero .col-xs-4:hover {
+#solutions-body .col-xs-4:hover {
 	opacity: 1;
 	background-color: rgba(255,255,255,0.1);
 	transition: all 0.2s ease-in-out;
 }
 
-#solutions-hero .col-xs-4:active {
+#solutions-body .col-xs-4:active {
 	opacity: 1;
 	background-color: rgba(255,255,255,0.1);
 	transition: all 0.1s ease-in-out;
@@ -1756,6 +1770,8 @@ span.chevron {font-size: 30px;}
 	background-size: cover;
 	display:table;
 	width:100%;
+	overflow: hidden;
+	height:600px;
 }
 
 .solutions-header .container {
@@ -1991,13 +2007,7 @@ body#partners-government {
 	height:100%;
    }
    
-#values-hero {
-	
-	background-size:cover !important;
-	background-attachment:fixed;
-	background-position: center center;
-	height:100%;
-}
+
 
 
 h2.about {
@@ -2007,7 +2017,7 @@ h2.about {
 	font-size: 36px;
 	letter-spacing: -0.5px;
 	color:#fff;
-	line-height: 140%;
+	line-height: 130%;
 	margin-bottom:0px;
 }
 
@@ -2065,9 +2075,13 @@ p.bio {
 
 #bio-container {
 	padding: 100px 0px;
-	background-size:cover;
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
 	border-top: 1px solid rgba(255,255,255,0.25);
+	border-bottom: 1px solid rgba(255,255,255,0.25);
 	background-color:#444;
+	background-image: url(<%= asset_path 'about-hero-blur.jpg' %>);
 }
 
 #bio-container .row {
@@ -2109,69 +2123,58 @@ div.bio p {
 
 #vineet {
 	background-image: url(<%= asset_path 'about-vineet-hero.jpg' %>);
-	background-position-x: -60px;
-	background-position-y: -15px;
+	background-position: -60px -15px;
 }
 
 #james {
 	background-image: url(<%= asset_path 'about-james-hero.jpg' %>);
-	background-position-x: -70px;
-	background-position-y: -25px;
+	background-position: -70px -25px;
 }
 
 #manuel {
 	background-image: url(<%= asset_path 'about-manuel-hero.jpg' %>);
-	background-position-x: -85px;
-	background-position-y: -5px;
+	background-position: -85px -5px;
 }
 
 #cecilia {
 	background-image: url(<%= asset_path 'about-cecilia-hero.jpg' %>);
-	background-position-x: -75px;
-	background-position-y: 0px;
+	background-position: -75px 0px;
 }
 
 #krista {
 	background-image: url(<%= asset_path 'about-krista-hero.jpg' %>);
-	background-position-x: -88px;
-	background-position-y: -20px;
+	background-position: -88px -20px;
 }
 
 #greg {
 	background-image: url(<%= asset_path 'about-greg-hero.jpg' %>);
-	background-position-x: -95px;
-	background-position-y: 0px;
+	background-position: -95px 0px;
 }
 
 #patricia {
 	background-image: url(<%= asset_path 'about-patricia-hero.jpg' %>);
-	background-position-x: -45px;
-	background-position-y: -10px;
+	background-position: -45px -10px;
 }
 
 #nic {
 	background-image: url(<%= asset_path 'about-nic-hero.jpg' %>);
-	background-position-x: -80px;
-	background-position-y: 0px;
+	background-position: -80px 0px;
 }
 
 #aditya {
 	background-image: url(<%= asset_path 'about-aditya-hero.jpg' %>);
-	background-position-x: -85px;
-	background-position-y: -10px;
+	background-position: -85px -10px;
 }
 
 #daniel {
 	background-image: url(<%= asset_path 'about-daniel-hero.jpg' %>);
-	background-position-x: -10px;
-	background-position-y: -9px;
+	background-position: -10px -9px;
 	background-size: 250px;
 }
 
 #bruno {
 	background-image: url(<%= asset_path 'about-bruno-hero.jpg' %>);
-	background-position-x: -146px;
-	background-position-y: -111px;
+	background-position: -146px -111px;
 	background-size: 731px;
 }
 
@@ -2194,12 +2197,68 @@ span.bod-link {
 	float:right;
 }
 
+#values-hero {
+	background-image: url(<%= asset_path 'values-hero.jpg' %>);
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
+	height:100%;
+}
+
 #values-container {
-	
+	border-top: 1px solid rgba(255,255,255,0.25);
+	background-image: url(<%= asset_path 'values-hero-blur.jpg' %>);
+	background-size:cover !important;
+	background-attachment:fixed;
+	background-position: center center;
 	background-color: rgba(0,0,0,0.75);
+	padding: 100px 0px;
+}
+
+#values-container .row {
+	margin-bottom: 25px;
+}
+
+#values-container h2.about {
+	margin-top: 15px;
 }
 
 .value {
 	width: 600px;
 	margin:100px auto;
+}
+
+.value-icon-container {
+	opacity: 0.6;
+	transition: all 0.25s ease-in-out;
+}
+
+.value-icon-container:hover {
+	opacity: 1;
+}
+
+.value-icon-container img {
+	width:80%;
+	display:block;
+	margin:0px auto;
+	position:relative;
+}
+
+.value-icon-container p {
+	text-align: center;
+	width: 100%;
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	padding: 5px 0px;
+	margin: 5px auto;
+	font-size: 12px;
+}
+
+p.purpose-bio {
+	font-size: 22px;
+	color:#fff;
+	font-weight: 300;
 }

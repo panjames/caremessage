@@ -17,3 +17,12 @@
 //= require_tree .
 //= require bootstrap.min
 //= require easing
+//= require stellar
+
+
+		$(function(){
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
+		});

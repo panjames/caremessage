@@ -1,13 +1,13 @@
-<div id=about-hero class="dark solutions solutions-header">
+<div data-stellar-background-ratio="0.2" id=about-hero class="dark solutions solutions-header">
 <div class="container body-container">
 
 <h1 class=hero style="margin-bottom: 0px;">Care. Better. Together.</h1>
-<p class=hero-sub-3>caremessage<sup>TM</sup> is a small 501(c)3 non-profit startup in the heart of San Francisco. Scroll down to learn more about who we are and what we value.</p>
+<p class=hero-sub-3>CareMessage<sup>TM</sup>  is a not-for-profit organization based in San Francisco.<br/> Scroll down to learn more about who we are and what we value.</p>
 </div>
 </div>
 
-<div id=bio-container class=dark>
-<div class="container">
+<div id="bio-container" class=dark>
+<div class="container" id=team>
 <h3 class=subheader>The Team<span class=bod-link><a data-toggle="modal" data-target="#board">Board of Directors <span class="glyphicon glyphicon-new-window"></span></a></span></h3>
 <div class=row>
 
@@ -23,7 +23,7 @@
 <div class="tab-pane fade" id="vineet-bio">
 <div class=bio-image-container><%= image_tag("vineet-bio.jpg", class: "tab-bio") %></div>
 <h2 class=about>Vineet Singal</h2>
-<h3 class=title>Chief Executive Officer<br/>Co-Foudner</h3>
+<h3 class=title>Chief Executive Officer<br/>Co-Founder</h3>
 <p class=bio>Vineet helps set the strategic direction of the organization. Previously, he led a team at Stanford Business School that helped register over 115,000 people into the bone marrow registry using social media. He has also conducted and published peer-reviewed research in cancer biology, opthalmology, neurology and epidemiology at the Mount Sinai School of Medicine, the National Institutes of Health and the Stanford School of Medicine. A Forbes ’30 under 30’ social entrepreneur, Vineet has served as a student representative on the Stanford Board of Trustees and graduated with University Distinction from Stanford.</p>
 </div>
 
@@ -31,7 +31,7 @@
 <div class="tab-pane fade" id="manuel-bio">
 <div class=bio-image-container><%= image_tag("manuel-bio.jpg", class: "tab-bio") %></div>
 <h2 class=about>Manuel Rivera, MS</h2>
-<h3 class=title>Chief Product Officer<br/>Co-Foudner</h3>
+<h3 class=title>Chief Product Officer<br/>Co-Founder</h3>
 <p class=bio>Manuel Rivera is a software engineer who leads all aspects of CareMessage's product development. He comes to the organization with a passion for health IT and expertise with real-time client-server communication, computer graphics, and interaction design. Manuel has an MS in Telecommunication Engineering from the Technical School of Madrid (UPM) with a specialty in Biomedical Engineering and has studied the social impact of technology at UC Berkeley.</p>
 </div>
 
@@ -56,7 +56,7 @@
 <div class=bio-image-container><%= image_tag("james-bio.jpg", class: "tab-bio") %></div>
 <h2 class=about>James Pan</h2>
 <h3 class=title>User Interface Designer</h3>
-<p class=bio>Hi, I'm James. Since I'm the creative guy, you'll notice that I'm the odd one out writing this in the first person. At caremessage, I do all the creative stuff — user interfaces/experience, visual design, and almost all the photos you see here on the website (I hiked up Twin Peaks... in a suit to grab the picture you see above!). I believe that design has the power to change medicine and healthcare as it is essentially a study of how we communicate.</p>
+<p class=bio>Hi, I'm James. Since I'm the creative guy, you'll notice that I'm the odd one out writing this in the first person. At CareMessage, I do all the creative stuff — user interfaces/experience, visual design, and almost all the photos you see here on the website (I hiked up Twin Peaks... in a suit to grab the picture you see above!). I believe that design has the power to change medicine and healthcare as it is essentially a study of how we communicate.</p>
 <p class=bio>I enjoy photography, EDM, and in my spare time, I attend medical school at Stanford University. Fun fact, I'm blessed with the useless ability to make latte art.</p>
 </p>
 </div>
@@ -73,7 +73,7 @@
 <div class=bio-image-container><%= image_tag("patricia-bio.jpg", class: "tab-bio") %></div>
 <h2 class=about>Patricia Sanchez, MPH</h2>
 <h3 class=title>Product Manager</h3>
-<p class=bio>Patricia helps develop many of CareMessage's programs, especially programs focused on childhood issues. She comes to the organization with a passion to improve health literacy among low income populations. She has over 8 years of experience creating health education materials that are both culturally and low literacy appropriate.  She has worked with a Medi-Cal managed care population at the Contra Costa Health Plan, and holds a Masters in Public Health (MPH) from San Diego State University.</p>
+<p class=bio>Patricia helps develop many of CareMessage's programs, especially those focused on childhood and adolescence health issues. She comes to the organization with a passion to improve health literacy among low income populations. She has over 8 years of experience creating health education materials that are both culturally and low literacy appropriate.  She has worked with a Medi-Cal managed care population at the Contra Costa Health Plan, and holds a Masters in Public Health (MPH) from San Diego State University.</p>
 </div>
 
 <div class="tab-pane fade" id="nic-bio">
@@ -110,29 +110,29 @@
 <div class=col-xs-7>
 
 	<div class=row>
-	<div class=col-xs-4><div class=bio id=vineet href="#vineet-bio" data-toggle="tab"><p>Vineet</p></div></div>
-	<div class=col-xs-4><div class=bio id=manuel href="#manuel-bio" data-toggle="tab"><p>Manuel</p></div></div>
-	<div class=col-xs-4><div class=bio id=cecilia href="#cecilia-bio" data-toggle="tab"><p>Cecilia</p></div></div>
+	<div class=col-xs-4><a href="#vineet-bio" data-toggle="tab"><div class=bio id=vineet ><p>Vineet</p></div></a></div>
+	<div class=col-xs-4><a href="#manuel-bio" data-toggle="tab"><div class=bio id=manuel ><p>Manuel</p></div></a></div>
+	<div class=col-xs-4><a href="#cecilia-bio" data-toggle="tab"><div class=bio id=cecilia><p>Cecilia</p></div></a></div>
 	
 	</div><!--.row-->
 	
 		<div class=row>
-	<div class=col-xs-4><div class=bio id=krista href="#krista-bio" data-toggle="tab"><p>Krista</p></div></div>
-	<div class=col-xs-4><div class=bio id=james href="#james-bio" data-toggle="tab"><p>James</p></div></div>
-	<div class=col-xs-4><div class=bio id=greg href="#greg-bio" data-toggle="tab"><p>Greg</p></div></div>
+	<div class=col-xs-4><a href="#krista-bio" data-toggle="tab"><div class=bio id=krista><p>Krista</p></div></a></div>
+	<div class=col-xs-4><a href="#greg-bio" data-toggle="tab"><div class=bio id=greg><p>Greg</p></div></a></div>
+	<div class=col-xs-4><a href="#aditya-bio" data-toggle="tab"><div class=bio id=aditya ><p>Aditya</p></div></a></div>
+	
 	
 	</div><!--.row-->
 	
 	<div class=row>
-	<div class=col-xs-4><div class=bio id=patricia href="#patricia-bio" data-toggle="tab"><p>Patricia</p></div></div>
-	<div class=col-xs-4><div class=bio id=nic href="#nic-bio" data-toggle="tab"><p>Nic</p></div></div>
-	<div class=col-xs-4><div class=bio id=daniel href="#daniel-bio" data-toggle="tab"><p>Daniel</p></div></div>
-	
+	<div class=col-xs-4><a href="#james-bio" data-toggle="tab"><div class=bio id=james ><p>James</p></div></a></div>
+	<div class=col-xs-4><a href="#patricia-bio" data-toggle="tab"><div class=bio id=patricia><p>Patricia</p></div></a></div>
+	<div class=col-xs-4><a href="#nic-bio" data-toggle="tab"><div class=bio id=nic><p>Nic</p></div></a></div>
 	</div><!--.row-->
 		
 	<div class=row>
-	<div class=col-xs-4><div class=bio id=aditya href="#aditya-bio" data-toggle="tab"><p>Aditya</p></div></div>
-	<div class=col-xs-4><div class=bio id=bruno href="#bruno-bio" data-toggle="tab"><p>Bruno</p></div></div>
+	<div class=col-xs-4><a href="#daniel-bio" data-toggle="tab"><div class=bio id=daniel><p>Daniel</p></div></a></div>
+	<div class=col-xs-4><a href="#bruno-bio" data-toggle="tab"><div class=bio id=bruno><p>Bruno</p></div></a></div>
 	
 	</div><!--.row-->
 
@@ -148,34 +148,84 @@
 </div> <!--.bio-container -->
 
 
-<!--<div id=values-hero class="dark solutions solutions-header">
-<div class="container body-container">
+<div data-stellar-background-ratio="0.2"  id=values-hero class="dark solutions solutions-header">
+<div class="container body-container" id=values>
 
 <h1 class=hero style="margin-bottom: 0px;">What drives us.</h1>
 <p class=hero-sub-3>Purpose, Patient–Centered, Partnership, Privacy, and People.</p>
 </div>
 </div>
 
-<div id=values-container class=dark>
+<div id="values-container" class=dark>
 <div class="container">
+<h3 class=subheader>Values</h3>
 
-<div class=value><h1 class=hero>Purpose</h1>
-<p class=hero-sub-3>We are driven to transform healthcare for disadvantaged populations and the organizations that serve them. Being nonprofit allows us to focus solely on serving our mission.</p></div>
+<div class=row>
 
-<div class=value><h1 class=hero>Patient-Centered</h1>
-<p class=hero-sub-3>We believe that the needs of patients must always come first. With CareMessage, we hope to improve the capabilities of the institutions that support them.</p></div>
+<div class=col-xs-5>
+<div class=tab-content>
 
-<div class=value><h1 class=hero>Partnership</h1>
-<p class=hero-sub-3>We believe that true change requires building long term relationships. In this new era of healthcare, we feel excited to collaborate with our partners to help address their diverse challenges.</p></div>
+<div class="tab-pane active fade in" id="home">
+<h2 class=about> We believe that true care is achieved through meaningful relationships among patients, their caregivers and the healthcare institutions that support them.</h2>
+<p class=about-sub>Click on a value to learn more.</p>
+</div>
 
-<div class=value><h1 class=hero>Privacy</h1>
-<p class=hero-sub-3>We remain committed to privacy and security of client health data. In addition to complying with the major privacy and security provisions of HIPAA and HITECH, we take several steps to augment the end-to-end security of protected health information. </p></div>
 
-<div class=value><h1 class=hero>People</h1>
-<p class=hero-sub-3>We are fiercely selective about our people. We value that indescribable sense of urgency and purpose above anything else...although we must say that we have an amazingly talented team.</p></div>
+<div class="tab-pane fade" id="purpose-value">
+<h2 class=about>Purpose</h2>
+<p class=purpose-bio>We are driven to transform healthcare for disadvantaged populations and the organizations that serve them. Being nonprofit allows us to focus solely on serving our mission.</p>
+</div>
+
+
+<div class="tab-pane fade" id="patient-value">
+<h2 class=about>Patient-Centered</h2>
+<p class=purpose-bio>We believe that the needs of patients must always come first. With CareMessage, we hope to improve the capabilities of the institutions that support them.</p>
+</div>
+
+
+<div class="tab-pane fade" id="partnership-value">
+<h2 class=about>Partnership</h2>
+<p class=purpose-bio>We believe that true change requires building long term relationships. In this new era of healthcare, we feel excited to collaborate with our partners to help address their diverse challenges.</p>
+</div>
+
+
+<div class="tab-pane fade" id="privacy-value">
+<h2 class=about>Privacy</h2>
+<p class=purpose-bio>We remain committed to privacy and security of client health data. In addition to complying with the major privacy and security provisions of HIPAA and HITECH, we take several steps to augment the end-to-end security of protected health information. </p>
+</div>
+
+<div class="tab-pane fade" id="people-value">
+<h2 class=about>People</h2>
+<p class=purpose-bio> We are fiercely selective about our people. We value that indescribable sense of urgency and purpose above anything else... although we must say that we have an amazingly talented team.</p>
+</div>
+
+
+
+</div><!--.tab-content-->
+</div>
+
+<div class=col-xs-7>
+
+	<div class=row>
+		<div class=col-xs-4><a href="#purpose-value" data-toggle="tab"><div class=value-icon-container id=purpose><%= image_tag("value-purpose.png", class: "value-icon") %><p>Purpose</p></div></a></div>
+	<div class=col-xs-4><a href="#patient-value" data-toggle="tab"><div class=value-icon-container id=patient><%= image_tag("value-patient.png", class: "value-icon") %><p>Patient Centric</p></div></a></div>
+	<div class=col-xs-4><a href="#partnership-value" data-toggle="tab"><div class=value-icon-container id=partnership><%= image_tag("value-partnership.png", class: "value-icon") %><p>Partnership</p></div></a></div>
+	
+	</div><!--.row-->
+	
+		<div class=row>
+	<div class=col-xs-4><a href="#privacy-value" data-toggle="tab"><div class=value-icon-container id=privacy><%= image_tag("value-privacy.png", class: "value-icon") %><p>Privacy</p></div></a></div>
+			<div class=col-xs-4><a href="#people-value" data-toggle="tab"><div class=value-icon-container id=people><%= image_tag("value-people.png", class: "value-icon") %><p>People</p></div></a></div>
+	
+	</div><!--.row-->
+	
+
+</div> <!--.col-xs-7 -->
+
+</div> <!--.row-->
 
 </div>
-</div>-->
+</div>
 
 
 

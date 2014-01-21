@@ -33,9 +33,9 @@
 		<li><a class="navigation close-menu" href=/partners/clinics/>Clinics</a></li>
 		<li><a class="navigation close-menu" href=/partners/hospitals/>Hospitals</a></li>
 		<li><a class="navigation close-menu" href=/partners/payers/>Payers</a></li>
-		<li><a class="navigation close-menu" href=/partners/organizers/>Organizers</a></li>
+		<li><a class="navigation close-menu" href=/partners/government/>Government</a></li>
 		<li><a class="navigation close-menu" href=/partners/researchers/>Researchers</a></li>
-		<li><a class="navigation close-menu" href=/partners/government/>Government</a></li>	
+		<li><a class="navigation close-menu" href=/partners/organizers/>Organizers</a></li>
 		</ul>
 	</div>
 	<li><a cclass="navigation close-menu" href=/welcome/about>About</a></li>
@@ -48,6 +48,7 @@
 	<form>
 	<input type="text" name="firstname" placeholder="First Name">
 	<input type="text" name="lastname" placeholder="Last Name">
+	<input type="text" name="organization" placeholder="Organization">
 	<input type="email" name="email" placeholder="E–mail Address">
 	<input type="text" name="phone" placeholder="Phone Number">
 	<textarea rows="4" placeholder="Your Message"></textarea>
@@ -64,7 +65,7 @@
      
         <div class="navbar-collapse collapse" id=contact-form-toggle>
           <ul class="nav navbar-nav navbar-right">
-          <li><a class=open-contact>CONTACT</a></li>       
+          <li><a class=open-contact><span class="glyphicon glyphicon-send"></span></a></li>       
 	      </ul>
         </div><!--/.nav-collapse -->
 
@@ -82,7 +83,7 @@
         
         <div class="navbar-collapse collapse" id=menu-toggle>
           <ul class="nav navbar-nav navbar-right">
-          <li><a class=open-menu>MENU</a></li>       
+          <li><a class=open-menu><span class="glyphicon glyphicon-th-list"></span></a></li>       
 	      </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -137,15 +138,15 @@
 	<li><a href=/partners/clinics/>Clinics</a></li>
 	<li><a href=/partners/hospitals/>Hospitals</a></li>
 	<li><a href=/partners/payers/>Payers</a></li>
-	<li><a href=/partners/organizers/>Organizers</a></li>
-	<li><a href=/partners/researchers/>Researchers</a></li>
 	<li><a href=/partners/government/>Government</a></li>
+	<li><a href=/partners/researchers/>Researchers</a></li>
+	<li><a href=/partners/organizers/>Organizers</a></li>
 </ul>
 
 <ul class="col-xs-3 col-sm-2 col-md-2">
 	<li class=footer-nav-heading>About</li>
-	<li><a href=/welcome/about>Team</a></li>
-	<li><a href=/welcome/about>Values</a></li>
+	<li><a href=/welcome/about#team>Team</a></li>
+	<li><a href=/welcome/about#values>Values</a></li>
 
 </ul>
 
@@ -237,7 +238,7 @@
 			},
 		});
 
-		$('#bio-container').blurjs({
+		/*$('#bio-container').blurjs({
 			source: '#about-hero',
 			radius: 100,
 			overlay: 'rgba(0,0,0,0.2)',
@@ -245,7 +246,7 @@
 				x: 0,
 				y: 0,
 			},
-		});
+		});*/
         
      });
 </script>
